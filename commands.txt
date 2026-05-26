@@ -1,0 +1,11 @@
+commands
+
+
+trim --> delets all the spaces
+
+
+$x = "Hello lovely World!";
+$y = explode(" ", $x);
+						--> explode --> array
+//Use print_r() to display the result			
+print_r($y);					
