@@ -1,0 +1,50 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+include("anzeige.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $vorname   = filter_input(INPUT_POST, "vorname",   FILTER_SANITIZE_SPECIAL_CHARS);
+    $fach      = filter_input(INPUT_POST, "fach",      FILTER_SANITIZE_SPECIAL_CHARS);
+    $schueler1 = filter_input(INPUT_POST, "schueler1", FILTER_SANITIZE_SPECIAL_CHARS);
+    $schueler2 = filter_input(INPUT_POST, "schueler2", FILTER_SANITIZE_SPECIAL_CHARS);
+    $schueler3 = filter_input(INPUT_POST, "schueler3", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $sql = "INSERT INTO registrierungsformular (vorname, fach, schueler1, schueler2, schueler3) 
+            VALUES ('$vorname', '$fach', '$schueler1', '$schueler2', '$schueler3')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "<p style='color:green'>Erfolgreich gespeichert!</p>";
+    } else {
+        echo "<p style='color:red'>Fehler: " . mysqli_error($conn) . "</p>";
+    }
+
+    mysqli_close($conn);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierungsformular</title>
+</head>
+<body>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <h2>Registrierungsformular</h2>
+        Vorname: <br>
+        <input type="text" name="vorname" required><br>
+        Fach: <br>
+        <input type="text" name="fach" required><br>
+        Schueler1: <br>
+        <input type="text" name="schueler1" required><br>
+        Schueler2: <br>
+        <input type="text" name="schueler2" required><br>
+        Schueler3: <br>
+        <input type="text" name="schueler3" required><br>
+        <input type="submit" value="Absenden">
+    </form>
+    <a href="anzeige.php">Tabellenansicht</a>
+</body>
+</html>

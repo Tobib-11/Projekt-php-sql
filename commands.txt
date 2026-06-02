@@ -5,7 +5,18 @@ trim --> delets all the spaces
 
 
 $x = "Hello lovely World!";
-$y = explode(" ", $x);
-						--> explode --> array
+$y = explode(" ", $x);	--> explode --> array
+
 //Use print_r() to display the result			
 print_r($y);					
+
+strlen() function returns the length of a string.
+
+str_word_count() function counts the number of words in a string.
+
+ rand() function generates a random number:
+
+define("CARS", array("Volvo", "BMW", "Toyota"));
+    CARS === Constante
+https://www.w3schools.com/php/php_magic_constants.asp
+
