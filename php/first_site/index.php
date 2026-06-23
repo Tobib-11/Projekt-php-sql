@@ -168,10 +168,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="reset" name="reset" value="Reset your Data here">
 
         <a href="../second_site/anzeige.php">
-              <button class="buttonTableIndex">
-                      Tabellenanzeige
-              </button>
-        </a>
+        
+                <înput class="buttonTableIndex" type="nextSide" value="Next Side">
+        
+              </a>
     </form>
 </div>
 </body>

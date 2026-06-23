@@ -15,3 +15,11 @@ Ich kenne den Namen meiner Datei nicht um sie zum Starten
 	sc query | findstr /i mysql
 
 -------------------------------------------------------------------
+Wenn Server nicht Startet!! (alles im VS code Terminal)
+	 schauen ob php installiert ist 
+	 	php -v
+	server starten 
+		 php -S localhost:8000
+	Firerfox:
+	 	http://localhost:8000/index.php
+-------------------------------------------------------------------

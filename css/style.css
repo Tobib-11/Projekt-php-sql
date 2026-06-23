@@ -4,12 +4,12 @@
 }
 
 /*anzeige seite*/
-.tablesAnzeige{
+.tablesAnzeige {
   display: flex;
-  gap: 450px; 
+  gap: 450px;
 }
 
-.anzeigeTablesLinks{
+.anzeigeTablesLinks {
   width: auto;
   height: fit-content;
 }
@@ -23,7 +23,7 @@
   margin-right: 10%;
 }
 
-.buttonTableIndex{
+.buttonTableIndex {
   display: flex;
   justify-content: center;
   height: fit-content;
@@ -31,7 +31,7 @@
   font-size: 20px;
 }
 
-body hr{
+body hr {
   margin-right: 75%;
 }
 
@@ -46,84 +46,266 @@ body hr{
   margin-right: 50%;
 }*/
 
-
-html, body {
-    margin: 0;                  
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;  
-    display: flex;              
-    justify-content: center;    
-    align-items: center;        
+html,
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .formularForInformationsIndex {
-    background-color: #ffffff;      
-    padding: 2.5rem;                
-    border-radius: 8px;             
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-    width: 620px;                 
-    max-width: 90vw;                
-    box-sizing: border-box;         
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 620px;
+  max-width: 90vw;
+  box-sizing: border-box;
 }
 
 .formularForInformationsIndex h2 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333;
-    font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
 }
 
 .formularForInformationsIndex input[type="text"],
 .formularForInformationsIndex input[type="password"],
 .formularForInformationsIndex select {
-    width: 100%;                    
-    padding: 0.75rem;
-    margin: 0.5rem 0 1.2rem;        
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
-
 
 .formularForInformationsIndex input[type="text"]:focus,
 .formularForInformationsIndex input[type="password"]:focus,
 .formularForInnersIndex select:focus {
-    outline: none;
-    border-color: #66afe9;
-    box-shadow: 0 0 5px rgba(102,175,233,.6);
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
 }
 
 .formularForInformationsIndex input[type="submit"],
 .formularForInformationsIndex input[type="reset"],
 .formularForInformationsIndex button {
-    display: inline-block;
-    background-color: darkgreen;   
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    margin: 0.3rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color .2s ease;
+  display: inline-block;
+  background-color: darkgreen;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
 }
-
 
 .formularForInformationsIndex input[type="submit"]:hover,
 .formularForInformationsIndex input[type="reset"]:hover,
 .formularForInformationsIndex button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
-
 
 .formularForInformationsIndex hr {
-    border: 0;
-    border-top: 1px solid #e0e0e0;
-    margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
 }
 
-.tableAnzeige{
-    display: flex;   
+.tableAnzeige {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container for all tables */
+.tablesAnzeige {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Container for the three manual tables */
+.selfMadeAnzeige {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual table containers */
+.anzeigeTablesLinks {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.333% - 20px); /* Three columns with gap */
+  min-width: 280px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #6c5ce7;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+tr:hover td {
+  background-color: #f8f9ff;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* KIAnzeige container */
+.KIAnzeige {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+
+/* Header styling for tables */
+.anzeigeTablesLinks h1,
+.KIAnzeige h2 {
+  color: #2d3436;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icon-like styling for headers */
+.anzeigeTablesLinks h1::before,
+.KIAnzeige h2::before {
+  content: "📊";
+  font-size: 1.2rem;
+}
+
+/* Button styling */
+.buttonBackAnzeige {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(108, 92, 231, 0.3);
+}
+
+.buttonBackAnzeige:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(108, 92, 231, 0.4);
+  background: linear-gradient(135deg, #5b4ccf, #8e7dff);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .anzeigeTablesLinks {
+    width: calc(50% - 20px); /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .selfMadeAnzeige {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .anzeigeTablesLinks {
+    width: 100%;
+  }
+
+  .tablesAnzeige {
+    padding: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .anzeigeTablesLinks h1,
+  .KIAnzeige h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Enhance table readability */
+table {
+  font-size: 0.95rem;
+}
+
+th {
+  background: linear-gradient(to bottom, #6c5ce7, #5b4ccf);
+}
+
+tr:nth-child(even) td {
+  background-color: #f8f9ff;
+}
+
+/* Improve input fields if any (though not present in current HTML) */
+input,
+select,
+textarea {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
 }
