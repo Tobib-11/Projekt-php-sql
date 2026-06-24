@@ -169,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <a href="../second_site/anzeige.php">
         
-                <înput class="buttonTableIndex" type="nextSide" value="Next Side">
+                <input class="buttonTableIndex" type="nextSide" value="Next Side">
         
               </a>
     </form>
